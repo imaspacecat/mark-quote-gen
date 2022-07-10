@@ -1,0 +1,22 @@
+.quote{
+	font-style: italic;
+	font-size: 25px;
+}
+
+#footer {
+	font-size: 13px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding-right: 10px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+#view_all {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+

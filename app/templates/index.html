@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+	<h1 class="pt-2">Mark Quote Generator</h1>
+	<br>
+	<button type="button" class="btn btn-outline-primary" id="reload_content">Out Of Context Me Again</button>
+	<br>
+	<br>
+	<div class="card">
+		<div class="card-header">
+    		L
+  		</div>
+  		<div class="card-body">
+    		<blockquote class="blockquote mb-0">
+					<p class="quote">{{ tweet["text"]|urlize(target="_blank") }}</p>
+      		<footer class="blockquote-footer">Mark<cite title="Source Title"> Out Of Context</cite></footer>
+    		</blockquote>
+  		</div>
+	</div>
+	<br>
+	<a class="badge text-bg-primary" style="text-decoration: none" href="https://twitter.com/Mark15798883/status/{{ tweet["id"] }}" target="_blank" data-bs-toggle="tooltip" title="Psst! Click here for some context (:">No Context Here...</a>
+	<script src="{{ url_for('static',filename='js/reload.js') }}"></script>
+{% endblock %}
+{% block button_href %}/all{% endblock %}
+{% block button_text %}View All Quotes{% endblock %}

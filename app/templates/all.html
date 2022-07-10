@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}All Quotes - {% endblock %}
+{% block content %}
+	<h1 class="pt-2">THE MOST OUT OF CONTEXT YOU WILL EVER BE</h1>
+	{% for tweet in tweets %}
+		<hr>
+		<p class="quote">{{ tweet["text"] }}</p>
+		<a class="badge text-bg-primary" style="text-decoration: none" href="https://twitter.com/Mark15798883/status/{{ tweet["id"] }}" target="_blank" data-bs-toggle="tooltip" title="Psst! Click here for some context (:">No Context Here...</a>
+	{% endfor %}
+	<hr>
+{% endblock %}
+{% block button_href %}/{% endblock %}
+{% block button_text %}Home{% endblock %}
